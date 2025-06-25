@@ -47,35 +47,21 @@
         <h1 class="sitename">Moderna</h1>
       </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+      <!-- Navbar -->
+      <div id="navbar-placeholder"></div>
+      <script>
+        // Load navbar.html
+        fetch('navbar.html')
+          .then(res => res.text())
+          .then(html => {
+            document.getElementById('navbar-placeholder').innerHTML = html;
+
+            // Wait for the navbar to be inserted, then re-run any necessary JS that depends on it
+            const script = document.createElement('script');
+            script.src = 'assets/js/main.js';
+            document.body.appendChild(script);
+          });
+      </script>
 
     </div>
   </header>
@@ -166,56 +152,55 @@
       <div class="container">
         <div class="row justify-content-center text-center">
           <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+            <h4 dir="rtl">عضویت در خبرنامه</h4>
+            <p dir="rtl">در خبرنامه ما عضو شوید و از آخرین اخبار محصولات و خدمات ما مطلع شوید!</p>
             <form action="forms/newsletter.php" method="post" class="php-email-form">
-              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-              <div class="loading">Loading</div>
+              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="عضویت"></div>
+              <div dir="rtl" class="loading">بارگزاری ...</div>
               <div class="error-message"></div>
-              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+              <div dir="rtl" class="sent-message">درخواست عضویت شما پذیرفته شد. سپاس از شما</div>
             </form>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="container footer-top">
+    <div dir="rtl" class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="d-flex align-items-center">
-            <span class="sitename">Moderna</span>
+            <span class="sitename">آمرتکا دواپس</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+            <p>استان قم - قنوات - بلوار ولی عصر - کوی گل خورشیدی - پلاک ۱</p>
+            <p class="mt-3"><strong>تلفن:</strong> <span>۰۲۵۳۳۲۲۵۰۶۱</span></p>
+            <p><strong>ایمیل:</strong> <span>amertca.com@gmail.com</span></p>
           </div>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
+          <h4>لینک های مفید</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">خانه</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">درباره ما</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">سرویس ها</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">شرایط همکاری</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
+          <h4>سرویس های ما</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">طراحی زیرساخت</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">مشاوره امنیت</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">پیاده سازی زیرساخت</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">زیرساخت های ابری</a></li>
           </ul>
         </div>
 
         <div class="col-lg-4 col-md-12">
-          <h4>Follow Us</h4>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+          <h4>ما را دنبال کنید</h4>
+          <p>در شبکه های اجتماعی ما را دنبال کنید</p>
           <div class="social-links d-flex">
             <a href=""><i class="bi bi-twitter-x"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>
@@ -224,17 +209,6 @@
           </div>
         </div>
 
-      </div>
-    </div>
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Moderna</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
 
